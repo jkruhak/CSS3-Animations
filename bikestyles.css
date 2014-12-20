@@ -1,0 +1,378 @@
+#unsupportedBrowser, #unsupportedBrowswer.hide {
+	display: none;
+}
+
+#unsupportedBrowser ul {
+	margin: 5px;
+}
+
+.no-keyframe #unsupportedBrowser,
+.no-cssanimations #unsupportedBrowser,
+.no-csstransforms #unsupportedBrowser,
+.no-csstransitions #unsupportedBrowser {
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: 0.8em;
+	padding: 10px;
+	background-color: rgb(15,70,131);
+	color: white;
+
+	-webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+}
+
+#unsupportedBrowser a {
+	color: white;
+	font-weight: bold;
+}
+
+#unsupportedBrowser #dismiss {
+	background-color: rgb(242,242,242);
+	width: 25px;
+	height: 25px;
+	color: red;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+
+	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+	position: absolute;
+	right: 3%;
+	top: 2%;
+	margin-left: 100px;
+	font-size: 1.2em;
+}
+
+#warningText {
+	margin: 0 10%;
+}
+
+#bike {
+	width: 400px;
+	height: 250px;
+	position: relative;
+	margin: 110px 50px;
+}
+
+#backwheel, #frontwheel {
+	width: 120px;
+	height: 120px;
+	border: 8px solid black;
+	position: absolute;
+	top: 68px;
+
+	/* Using border-radius: 50% doesn't work in certain versions of mobile Safari,
+	   so we're using absolute pixel values first, and if 50% isn't understood,
+	   these absolute values will be used. */
+	-webkit-border-radius: 70px;
+	-moz-border-radius: 70px;
+	border-radius: 70px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#backwheel {
+	left: 35px;
+}
+
+#frontwheel {
+	left: 278px;
+}
+
+.center {
+	position: absolute;
+	top: 56px;
+	left: 58px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: black;
+}
+
+div[class*="spoke"] {
+	height: 1px;
+	width: 62px;
+	background-color: black;
+	position: absolute;
+	top: 60px;
+
+	-webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	-o-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+}
+
+.spoke2 {
+	-webkit-transform: rotate(72deg);
+	-moz-transform: rotate(72deg);
+	-ms-transform: rotate(72deg);
+	-o-transform: rotate(72deg);
+	transform: rotate(72deg);
+}
+
+.spoke3 {
+	-webkit-transform: rotate(144deg);
+	-moz-transform: rotate(144deg);
+	-ms-transform: rotate(144deg);
+	-o-transform: rotate(144deg);
+	transform: rotate(144deg);
+}
+
+.spoke4 {
+	-webkit-transform: rotate(216deg);
+	-moz-transform: rotate(216deg);
+	-ms-transform: rotate(216deg);
+	-o-transform: rotate(216deg);
+	transform: rotate(216deg);
+}
+
+.spoke5 {
+	-webkit-transform: rotate(288deg);
+	-moz-transform: rotate(288deg);
+	-ms-transform: rotate(288deg);
+	-o-transform: rotate(288deg);
+	transform: rotate(288deg);
+}
+
+#bike div[id*="frame"] {
+	height: 10px;
+	background-color: red;
+	position: absolute;
+	z-index: 2;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#frametop {
+	width: 163px;
+	top: 20px;
+	left: 158px;
+}
+
+#framechainstay {
+	top: 131px;
+	left: 104px;
+	width: 85px;
+}
+
+#framefork, #frameseattube {
+	top: 75px;
+	left: 272px;
+	width: 123px;
+
+	-webkit-transform: rotate(75deg);
+	-moz-transform: rotate(75deg);
+	-ms-transform: rotate(75deg);
+	-o-transform: rotate(75deg);
+	transform: rotate(75deg);
+}
+
+#frameseattube {
+	left: 112px;
+}
+
+#frameseatstay {
+	top: 78px;
+	left: 66px;
+	height: 6px !important;
+	width: 130px;
+
+	-webkit-transform: rotate(-65deg);
+	-moz-transform: rotate(-65deg);
+	-ms-transform: rotate(-65deg);
+	-o-transform: rotate(-65deg);
+	transform: rotate(-65deg);
+}
+
+#framedowntube {
+	width: 170px;
+	top: 78px;
+	left: 165px;
+
+	-webkit-transform: rotate(-40deg);
+	-moz-transform: rotate(-40deg);
+	-ms-transform: rotate(-40deg);
+	-o transform: rotate(-40deg);
+	transform: rotate(-40deg);
+}
+
+.handlebars {
+	position: relative;
+	left: 310px;
+}
+
+#post {
+	background-color: silver;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	top: 10px;
+}
+
+#bar, #handle {
+	position: absolute;
+	top: 5px;
+	width: 50px;
+	height: 10px;
+	background-color: silver;
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	-ms-transform-origin: 0% 50%;
+	-o-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+
+	-webkit-transform: rotate(-20deg);
+	-moz-tranform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+#handle {
+	background-color: black;
+	width: 25px;
+	height: 12px;
+	
+	-webkit-transform: rotate(-20deg) translateX(25px);
+	-moz-transform: rotate(-20deg) translateX(25px);
+	-ms-transform: rotate(-20deg) translateX(25px);
+	-o-transform: rotate(-20deg) translateX(25px);
+	transform: rotate(-20deg) translateX(25px);
+}
+
+#seat {
+	background-color: black;
+	position: absolute;
+	left: 135px;
+
+	z-index: 3;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#base {
+	width: 30px;
+	height: 25px;
+}
+
+#nose {
+	background-color: black;
+	width: 40px;
+	height: 15px;
+	position: absolute;
+	top: 0;
+	left: 20px;
+
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-bottom-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#pedalwheel {
+	width: 30px;
+	height: 30px;
+	border: 4px solid black;
+	position: absolute;
+	top: 117px;
+	left: 172px;
+	z-index: 4;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.pedalcenter {
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: black;
+}
+
+div[class*="pedalspoke"] {
+	height: 1px;
+	width: 16px;
+	background-color: black;
+	position: absolute;
+	top: 15px;
+
+	-webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	-o-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+}
+
+.pedalspoke2 {
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.pedalspoke3 {
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	transform: rotate(120deg);
+}
+
+.pedalspoke4 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.pedalspoke5 {
+	-webkit-transform: rotate(240deg);
+	-moz-transform: rotate(240deg);
+	-ms-transform: rotate(240deg);
+	-o-transform: rotate(240deg);
+	transform: rotate(240deg);
+}
+
+.pedalspoke6 {
+	-webkit-transform: rotate(300deg);
+	-moz-transform: rotate(300deg);
+	-ms-transform: rotate(300deg);
+	-o-transform: rotate(300deg);
+	transform: rotate(300deg);
+}
+
+#pedalfoottop, #pedalfootbottom {
+	position: absolute;
+	width: 2px;
+	height: 32px;
+	left: 190px;
+	background-color: black;
+	z-index: 3;
+}
+
+#pedalfoottop {
+	top: 104px;
+}
+
+#pedalfootbottom {
+	top: 138px;
+}
