@@ -1,0 +1,19 @@
+.box {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+	color: white;
+
+	-webkit-transition: -webkit-transform 2s;
+	-moz-transition: -moz-transform 2s;
+	-o-transition: o-transform 2s;
+	transition: transform 2s;
+}
+
+.box:hover {
+	-webkit-transform: translateX(400px);
+	-moz-transform: translateX(400px);
+	-ms-transform: translateX(400px);
+	-o-transform: translateX(400px);
+	transform: translateX(400px);
+}

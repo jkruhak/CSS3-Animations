@@ -364,15 +364,15 @@ div[class*="pedalspoke"] {
 	position: absolute;
 	width: 2px;
 	height: 32px;
-	left: 190px;
+	left: 15px;
 	background-color: black;
 	z-index: 3;
 }
 
 #pedalfoottop {
-	top: 104px;
+	top: -16px;
 }
 
 #pedalfootbottom {
-	top: 138px;
+	top: 17px;
 }

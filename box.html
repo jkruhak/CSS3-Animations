@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example of CSS3 Transforms</title>
+	
+	<style>
+		#box {
+			width: 150px;
+			height: 150px;
+			background-color: blue;
+			color: white;
+		
+			-webkit-transition: -webkit-transform 2s;
+			-moz-transition: -moz-transform 2s;
+			-o-transition: o-transform 2s;
+			transition: transform 2s;
+		}
+		
+		#box:hover {
+			-webkit-transform: translateX(400px);
+			-moz-transform: translateX(400px);
+			-ms-transform: translateX(400px);
+			-o-transform: translateX(400px);
+			transform: translateX(400px);
+		}
+		
+		#box.translate {
+			-webkit-transform: translateX(400px);
+			-moz-transform: translateX(400px);
+			-ms-transform: translateX(400px);
+			-o-transform: translateX(400px);
+			transform: translateX(400px);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h1>hello.</h1>
+	</div>
+
+	<script src="box.js"></script>
+</body>
+</html>
