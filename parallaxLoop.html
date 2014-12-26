@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<script src="modernizr.custom.44638.js"></script>
+
+	<style>
+		@-webkit-keyframes desertMove {
+			0% { background-position: 0% 0%; }
+			100% { background-position: -800px 0%; }
+		}
+
+		@-webkit-keyframes tumbleweed {
+			0% { }
+			100% {
+				/* ends off to the left of the containing element */
+				left: -60px;
+				-webkit-transform: rotate(-1080deg);
+			}
+		}
+
+		@-webkit-keyframes shadow {
+			0% { }
+			100% { left: -60px; }
+		}
+
+		@-webkit-keyframes robotMove {
+			0% { -webkit-transform: translateY(0px); }
+			50% { -webkit-transform: translateY(5px); }
+			100% { -webkit-transform: translateY(0px); }
+		}
+
+		#desert {
+			background-image: url('desert.jpg');
+			overflow: hidden;
+			width: 400px;
+			height: 484px;
+			position: relative;
+		
+			-webkit-animation: desertMove 18s linear infinite;
+		}
+
+		#tumbleweed {
+			width: 50px;
+			height: 56px;
+			background-image: url('tumbleweed.png');
+			position: absolute;
+			top: 310px;
+			/* begins past the right of the containing element */
+			left: 400px;
+			z-index: 2;
+
+			-webkit-animation: tumbleweed 5s ease-in 1s infinite;
+		}
+
+		#shadow {
+			width: 50px;
+			height: 50px;
+
+			-webkit-border-radius: 25px;
+
+			position: absolute;
+			top: 340px;
+			left: 400px;
+			z-index: 1;
+			/* Color the shadow with black by default,
+			   a semi-transparent black next, and then with a semi-transparent black
+			   to transparent radial gradient as the preferred option. */
+			background: #000000;
+			background: rgba(0,0,0,0.5);
+			background: -webkit-radial-gradient(53% 56%, circle farthest-side, rgba(0,0,0,0.5), transparent 100%);
+
+			-webkit-transform: scale(1, 0.2);
+
+			-webkit-animation: shadow 5s ease-in 1s infinite;
+		}
+
+		#robot {
+			width: 150px;
+			height: 295px;
+			background-image: url('robotoCropo150.png');
+
+			position: absolute;
+			left: 100px;
+			top: 230px;
+			z-index: 3;
+
+			-webkit-animation: robotMove 1s linear 0 infinite;
+		}
+	</style>
+</head>
+<body>
+	<div id="desert">
+		<div id="tumbleweed"></div>
+		<div id="shadow"></div>
+		<div id="robot"></div>
+	</div>
+</body>
+</html>
