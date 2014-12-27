@@ -48,11 +48,11 @@ nav a {
 }
 
 /* Scene 2 and 3 links are initially hidden */
-.two, .three {
+.two, .three, .four {
 	opacity: 0;
 }
 
-.two.visible, .three.visible {
+.two.visible, .three.visible, .four.visible {
 	opacity: 1;
 }
 
@@ -206,3 +206,5 @@ nav a {
 #inside.move {
 	left: 200px;
 }
+
+/* Reset the scene */

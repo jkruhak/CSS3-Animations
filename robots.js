@@ -29,11 +29,30 @@ $(document).ready(function() {
 	});
 
 	$('#background2').on(transEndEventName, function() {
-		$('.two').removeClass("visible");
-		$('.three').addClass("visible");
+		$('.two').removeClass('visible');
+		$('.three').addClass('visible');
 	});
 
 	$('.three').on('click', function() {
 		$('#robot2, #cat, #background2, #inside').addClass('move');
+	});
+
+	$('#robot2').on(transEndEventName, function() {
+		$('.three').removeClass('visible');
+		$('.four').addClass('visible');
+	});
+
+	$('.four').on('click', function() {
+		console.log('start over');
+		$('#background1').removeClass('move, slideOut');
+		$('#background2').removeClass('move, slideIn');
+		$('#cat, #robot2, .robotUnit, #bikerack').removeClass('visible, move');
+	});
+
+	$('#background1').on(transEndEventName, function() {
+		$('.one').addClass("visible");
+		$('.two').removeClass('visible');
+		$('.three').removeClass('visible');
+		$('.four').removeClass('visible');
 	});
 });
