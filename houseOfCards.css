@@ -65,6 +65,12 @@
 	left: 120px;
 }
 
+#sidepile {
+	position: relative;
+	left: 350px;
+	top: 150px;
+}
+
 /* Basic styles for the playing cards */
 .card {
 	position: absolute;
@@ -183,4 +189,26 @@
 	-moz-transform: rotateZ(90deg) rotateY(90deg);
 	-ms-transform: rotateZ(90deg) rotateY(90deg);
 	transform: rotateZ(90deg) rotateY(90deg);
+}
+
+.leftpile {
+	-webkit-transform: rotateY(115deg) rotateX(90deg);
+	-moz-transform: rotateY(115deg) rotateX(90deg);
+	-ms-transform: rotateY(115deg) rotateX(90deg);
+	transform: rotateY(115deg) rotateX(90deg);
+}
+
+.toppile {
+	-webkit-transform: rotateY(150deg) rotateX(90deg);
+	-moz-transform: rotateY(150deg) rotateX(90deg);
+	-ms-transform: rotateY(150deg) rotateX(90deg);
+	transform: rotateY(150deg) rotateX(90deg);
+	z-index: 3;
+}
+
+.flatpile {
+	-webkit-transform: rotateZ(90deg) rotateX(95deg) rotateY(90deg);
+	-moz-transform: rotateZ(90deg) rotateX(95deg) rotateY(90deg);
+	-ms-transform: rotateZ(90deg) rotateX(95deg) rotateY(90deg);
+	transform: rotateZ(90deg) rotateX(95deg) rotateY(90deg);
 }
