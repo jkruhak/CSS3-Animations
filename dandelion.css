@@ -108,7 +108,7 @@ div[id^="quadrant"] {
 }
 
 .quad div:nth-of-type(2) {
-	-webkit-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg) rotateY(-50deg);
 	-webkit-animation: seedChange2 6s;
 }
 
@@ -118,7 +118,7 @@ div[id^="quadrant"] {
 }
 
 .quad div:nth-of-type(4) {
-	-webkit-transform: rotate(-50deg);
+	-webkit-transform: rotate(-50deg) rotateY(-50deg);
 	-webkit-animation: seedChange4 6s;
 }
 
@@ -152,7 +152,7 @@ div[id^="quadrant"] {
 		left: 290px;
 	}
 	100% {
-		left: 2600px;
+		left: 1600px;
 	}
 }
 
@@ -194,7 +194,7 @@ div[id^="quadrant"] {
 		left: 190px;
 	}
 	100% {
-		left: 2600px;
+		left: 1600px;
 	}
 }
 
@@ -204,7 +204,7 @@ div[id^="quadrant"] {
 		left: 140px;
 	}
 	100% {
-		left: 2600px;
+		left: 1600px;
 	}
 }
 

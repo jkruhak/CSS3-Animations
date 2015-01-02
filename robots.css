@@ -43,7 +43,7 @@ nav a {
 	transition: opacity 1s;
 }
 
-.one.invisible {
+.one.invisible, .three.invisible {
 	opacity: 0;
 }
 
