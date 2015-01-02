@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>CUBE</title>
 
+	<script src="modernizr.custom.57948.js"></script>
+
 	<link rel="stylesheet" href="cube.css">
 </head>
 <body>
@@ -16,6 +18,27 @@
 			<div id="cubefront"></div>
 			<div id="cubeback"></div>
 		</div>
+	
+		<div id="xslider">
+			<input name="range" id="slider" type="range" min="0" max="360" step="36" value="0" />
+			<label for="slider">X: </label>
+			<span id="xdegrees">0</span>
+		</div>
+
+		<div id="yslider">
+			<input id="verticalslider" type="range" min="0" max="360" step="36" value="0" />
+			<br>
+			<label for="verticalslider">Y: </label>
+			<span id="ydegrees">0</span>
+		</div>
+
+		<div id="zslider">
+			<input id="nearnessslider" type="range" min="0" max="360" step="36" value="0" />
+			<label for="zslider">Z: </label>
+			<span id="zdegrees">0</span>
+		</div>
 	</div>
+
+	<script type="text/javascript" src="cube.js"></script>
 </body>
 </html>

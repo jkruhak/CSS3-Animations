@@ -26,9 +26,12 @@
 	-moz-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+
+	-webkit-transition: all 0.6s;
 }
 
 .cube div {
+	display: block;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -89,4 +92,31 @@
 	-moz-transform: translateZ(-100px);
 	-ms-transform: translateZ(-100px);
 	transform: translateZ(-100px);
+}
+
+/* Styling the sliders */
+#xslider {
+	position: absolute;
+	top: -80px;
+}
+
+#slider {
+	left: 30px;
+}
+
+#yslider {
+	position: absolute;
+	right: -110px;
+}
+
+#verticalslider {
+	-webkit-appearance: slider-vertical;
+	width: 20px;
+	height: 100px;
+	top: 40px;
+}
+
+#zslider {
+	position: absolute;
+	bottom: -100px;
 }
