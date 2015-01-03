@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Woolf</title>
+
+	<link rel="stylesheet" href="html5reset.css">
+	<link rel="stylesheet" href="woolf.css">
+
+	<script type="text/javascript" src="modernizr.custom.57498.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="roller"></div>
+		<div id="paper">
+			<div id="quote">
+				<!-- first part of quote will be populated via JavaScript -->
+				<p id="one"></p>
+				<p id="two">
+					One cannot<br class="skip">
+					think well,<br class="skip">
+					love well,<br class="skip">
+					sleep well<br class="skip">
+					<!-- remaining portion of quote will be populated via JavaScript -->
+				</p>
+			</div> <!-- end quote -->
+			<div id="subscenes">
+				<div id="think">
+					THINK
+				</div>
+				<div id="well">
+					WELL
+				</div>
+				<div id="love">
+					<p>LOVE WELL</p>
+				</div>
+				<div id="sleep">
+					<span>SLEEP</span>
+					<span>WELL</span>
+				</div>
+			</div>
+		</div> <!-- end paper -->
+	</div> <!-- end container -->
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="woolf.js"></script>
+</body>
+</html>
