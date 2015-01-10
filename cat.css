@@ -1,0 +1,84 @@
+.csstransforms3d #house {
+	width: 100%;
+	height: 700px;
+	position: absolute;
+	left: 315px;
+
+	background-image: url('house.png');
+	background-repeat: no-repeat;
+
+	-webkit-transition: 2s;
+	-webkit-transform: scale3d(3,3,3);
+	-webkit-transform-origin: 50% 0%;
+
+	z-index: -3;
+}
+
+#cat {
+	-webkit-perspective: 600px;
+	position: absolute;
+	left: 100px;
+}
+
+#head {
+	background-image: url('AristocatHead2.png');
+	width: 350px;
+	height: 400px;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+#neck {
+	background-image: url('AristocatNeck2.png');
+	width: 350px;
+	height: 400px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+
+#lefteye {
+	top: 144px;
+	left: 98px;
+}
+
+#righteye {
+	top: 140px;
+	left: 178px;
+}
+
+#lefteye, #righteye {
+	width: 4px;
+	height: 40px;
+	background-color: black;
+	border: 4px solid black;
+	border-bottom-left-radius: 10px 15px;
+	border-bottom-right-radius: 10px 15px;
+	position: absolute;
+	z-index: -1;
+}
+
+#page1, #page2 {
+	-webkit-transition: all 2s;
+	background-image: 
+		-webkit-radial-gradient(center top, circle cover,
+			rgba(255,255,255,0) 70%,
+			rgba(255,255,255,0.9)),
+		-webkit-linear-gradient(150px 0px, rgba(0,0,0,0.15), transparent);
+}
+
+#page1 {
+	left: 208px;
+	-webkit-transform-origin: 0% 50%;
+	-webkit-transform: rotateY(10deg);
+	-webkit-box-shadow: -2px 1px 4px rgba(0,0,0,0.27);
+}
+
+#page2 {
+	left: -33px;
+	top: 0px;
+	-webkit-transform-origin: 100% 50%;
+	-webkit-transform: rotateY(-10deg);
+	-webkit-box-shadow: 2px 1px 4px rgba(0,0,0,0.27);
+}

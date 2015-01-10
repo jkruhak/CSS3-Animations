@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Morgan the Cat</title>
+
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="modernizr.custom.57498.js"></script>
+
+	<link rel="stylesheet" href="base.css">
+	<link rel="stylesheet" href="cat.css">
+
+	<style>
+		#window {
+			width: 550px;
+			height: 564px;
+			position: absolute;
+			top: 30px;
+			left: 220px;
+			overflow: hidden;
+			z-index: -1;
+			-webkit-transition: all 1.5s;
+			border: 2px solid black;
+			border-radius: 15px;
+
+			background: rgb(253,255,255);
+			background:
+				-webkit-radial-gradient(center, ellipse cover,
+					rgba(253,255,255,1) 0%,
+					rgba(247,247,247,1) 47%,
+					rgba(211,211,211,1) 86%,
+					rgba(196,197,198,1) 100%);
+		}
+	</style>
+</head>
+<body>
+	<div id="stage">
+		<div id="house"></div>
+		<div id="window">
+			<div id="cat">
+				<div id="eyes">
+					<div id="lefteye"></div>
+					<div id="righteye"></div>
+				</div>
+				<div id="head"></div>
+				<div id="neck"></div>
+				<div id="newspaper">
+					<div id="page1">
+						<!--newspaper text -->
+						<img id="rightpaw" src="pawRight.png" width="100">
+					</div> <!-- end of page1 -->
+					<div id="page2">
+						<!-- more newspaper text -->
+						<img id="leftpaw" src="pawLeft.png" width="100">
+					</div> <!-- end of page2 -->
+				</div> <!-- end of newspaper -->
+			</div> <!-- end of cat -->
+		</div> <!-- end of window -->
+	</div> <!-- end of stage -->
+
+	<script src="cat.js"></script>
+</body>
+</html>
