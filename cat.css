@@ -1,3 +1,17 @@
+body {
+	-webkit-transition: background-color 1.5s;
+	overflow: hidden;
+}
+
+#stage {
+	height: 800px;
+/*	display: none; */
+}
+
+.hide {
+	display: none !important;
+}
+
 .csstransforms3d #house {
 	width: 100%;
 	height: 700px;
@@ -59,6 +73,65 @@
 	z-index: -1;
 }
 
+#leftpaw {
+	position: absolute;
+	left: -40px;
+	top: 20px;
+}
+
+#rightpaw {
+	position: absolute;
+	right: -60px;
+	top: 40px;
+	z-index: 2;
+}
+
+#newspaper {
+	position: absolute;
+	top: 285px;
+	left: -50px;
+	width: 400px;
+
+	-webkit-perspective: 600px;
+	-webkit-transition: all 2s;
+
+	z-index: 3;
+}
+
+#newspaper div {
+	width: 200px;
+	height: 280px;
+	padding: 3% 5%;
+	background-color: rgb(242,242,242);
+	position: absolute;
+	border-bottom-right-radius: 160px 2px;
+	border-bottom-left-radius: 160px 2px;
+	border-top-left-radius: 160px 22px;
+	border-top-right-radius: 160px 20px;
+	-webkit-background-clip: padding;
+}
+
+#newspaper h1 {
+	font-family: PlugNickelBlackRegular, sans-serif;
+	font-size: 12pt;
+	text-align: center;
+	text-decoration: underline;
+	margin-top: 2%
+}
+
+#newspaper h2 {
+	font-size: 11pt;
+}
+
+#newspaper h3 {
+	font-size: 10pt;
+}
+
+#newspaper img {
+	float: left;
+	padding-right: 2%;
+}
+
 #page1, #page2 {
 	-webkit-transition: all 2s;
 	background-image: 
@@ -81,4 +154,217 @@
 	-webkit-transform-origin: 100% 50%;
 	-webkit-transform: rotateY(-10deg);
 	-webkit-box-shadow: 2px 1px 4px rgba(0,0,0,0.27);
+}
+
+/* Animaions to move the newspaper */
+#newspaper.scene1 {
+	-webkit-transform: rotateZ(-2deg);
+}
+
+#page1.scene1 {
+	-webkit-transform: rotateY(40deg);
+}
+
+#lefteye.scene1, #righteye.scene1 {
+	-webkit-transition: all 1s;
+}
+
+#lefteye.scene1 {
+	left: 102px;
+}
+
+#righteye.scene1 {
+	left: 182px;
+}
+
+/* Keyframe animation to move morgan's eyes */
+@-webkit-keyframes reading {
+	0% { }
+	30% { -webkit-transform: translate3d(-3px,2px,0);}
+	50% { -webkit-transform: translate3d(3px,2px,0);}
+	80% { -webkit-transform: translate3d(-3px,2px,0);}
+	100% { -webkit-transform: translate3d(3px,2px,0);}
+}
+
+#lefteye.scene2,
+#righteye.scene2 {
+	-webkit-animation: reading 1s both 3 linear;
+}
+
+/* Animating page 2 */
+#newspaper.scene3 {
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateZ(-2deg) translate3d(-50px,0,0);
+}
+
+#page2.scene3 {
+	-webkit-transform: rotateY(-30deg);
+}
+
+@-webkit-keyframes readingPage2 {
+	0% { -webkit-transform: translate3d(-5px,3px,0);}
+	30% { -webkit-transform: translate3d(-8px,3px,0);}
+	50% { -webkit-transform: translate3d(-5px,3px,0);}
+	80% { -webkit-transform: translate3d(-8px,3px,0);}
+	100% { -webkit-transform: translate3d(-5px,3px,0);}
+}
+
+#lefteye.scene3,
+#righteye.scene3 {
+	-webkit-animation: readingPage2 1s both 3 linear;
+}
+
+/* Applying a gradient to the background */
+body.scene4 {
+	background: rgb(249,249,249);
+	background: 
+		-webkit-radial-gradient(center, ellipse cover,
+			rgba(249,249,249,1) 0%,
+			rgba(184,198,223,1) 61%,
+			rgba(135,152,181,1) 99%);
+}
+
+/* Zooming out by scaling down */
+#house.scene4 {
+	width: 80%;
+	min-width: 500px;
+	left: 10%;
+	top: 0;
+	-webkit-transform: scale3d(1,1,1);
+}
+
+/* Scaling down Morgan and moving the window */
+#window.scene4 {
+	width: 155px;
+	height: 160px;
+	-webkit-transform: translate3d(240px,-15px,0);
+}
+
+#cat.scene4 {
+	-webkit-transition: all 1.5s;
+	-webkit-transform: scale3d(.3,.3,.3);
+	left: -112px;
+	top: -150px;
+}
+
+/* Styling Murphy the police cat */
+#murphy {
+	position: absolute;
+	top: 250px;
+	left: 1650px;
+	-webkit-transition: left 2s;
+	z-index: 2;
+}
+
+#murphyarm {
+	width: 100px;
+	position: absolute;
+	top: 87px;
+	left: 105px;
+	-webkit-transform-origin: 100% 50%;
+}
+
+/* The knocking animation */
+@-webkit-keyframes knock {
+	0% { }
+	10% { -webkit-transform: rotateZ(35deg);}
+	20% { -webkit-transform: rotateZ(10deg);}
+	30% { -webkit-transform: rotateZ(35deg);}
+	50% { -webkit-transform: rotateZ(10deg);}
+	60% { -webkit-transform: rotateZ(35deg);}
+	70% { -webkit-transform: rotateZ(10deg);}
+	80% { -webkit-transform: rotateZ(35deg);}
+	100% { -webkit-transform: rotateZ(10deg);}
+}
+
+#murphyarm.scene6 {
+	z-index: -2;
+	-webkit-animation: knock 2s forwards 2;
+}
+
+/* Morgan folding his paper */
+@-webkit-keyframes foldPage1 {
+	0% { }
+	50% { -webkit-transform: rotateY(74deg);}
+	100% { -webkit-transform: rotateY(10deg);}
+}
+
+@-webkit-keyframes foldPage2 {
+	0% { }
+	50% { -webkit-transform: rotateY(-80deg);}
+	100% { -webkit-transform: rotateY(-30deg);}
+}
+
+#page1.scene5, #page1.scene6 {
+	-webkit-animation: foldPage1 0.8s;
+}
+
+#page2.scene5, #page2.scene6 {
+	-webkit-animation: foldPage2 0.8s;
+}
+
+/* Morgan taking a look at Murphy */
+#lefteye.scene6, #righteye.scene6 {
+	-webkit-transition: 1s;
+	-webkit-transform: translate3d(2px,0,0);
+}
+
+#murphy.scene5 {
+	left: 650px;
+}
+
+/* Fading out the elements by changing background-color */
+.hide {
+	display: none !important;
+}
+
+body.scene7 {
+	background: black;
+}
+
+/* Styling the newspaper */
+.newsprint {
+	background-color: rgb(242,242,242);
+
+	background-image: 
+	-webkit-gradient(radial, center top,
+		200, center top, 300,
+		from(rgba(255,255,255,0)),
+		to(rgba(255,255,255,0.9))),
+	-webkit-gradient(linear, center top,
+		right bottom,
+		from(rgba(0,0,0,0.15)),
+		to(transparent));
+}
+
+#newsreel {
+	width: 600px;
+	height: 500px;
+	margin: 5% auto;
+	padding: 0 3%;
+	display: none;
+
+	-webkit-border-radius: 12px 100px / 100px 12px;
+	-webkit-background-clip: padding-box;
+}
+
+#newsreel h1 {
+	font-family: PlugNickelBlackRegular, sans-serif;
+	font-size: 2em;
+	padding-top: 3%;
+	text-align: center;
+	text-decoration: underline;
+}
+
+/* Spinning the newspaper */
+@-webkit-keyframes spin {
+	0% { -webkit-transform: scale3d(.2,.2,.2) rotateZ(0);}
+	70% { -webkit-transform: scale3d(.9,.9,.9) rotateZ(7200deg);}
+	100% { -webkit-transform: scale3d(1,1,1) rotateZ(7200deg);}
+	
+}
+
+#newsreel.scene7 {
+	display: block;
+	-webkit-animation: spin 1s forwards;
 }
