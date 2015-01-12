@@ -66,6 +66,10 @@ function setup() {
 	}, 12100);
 
 	setTimeout(function() {
+		$('#car').addClass('scene5');
+	}, 12100);
+
+	setTimeout(function() {
 		$('#page1, #page2').addClass('scene5');
 	}, 13100);
 
@@ -99,6 +103,10 @@ function setup() {
 
 	setTimeout(function() {
 		$('#murphy').addClass('hide');
+	}, 21100);
+
+	setTimeout(function() {
+		$('#car').addClass('hide');
 	}, 21100);
 
 	setTimeout(function() {

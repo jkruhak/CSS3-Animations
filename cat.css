@@ -368,3 +368,16 @@ body.scene7 {
 	display: block;
 	-webkit-animation: spin 1s forwards;
 }
+
+/* Challenge - police car */
+#car {
+	position: absolute;
+	top: 355px;
+	left: 1650px;
+	-webkit-transition: left 0.5s;
+	z-index: 3;
+}
+
+#car.scene5 {
+	left: 650px;
+}
