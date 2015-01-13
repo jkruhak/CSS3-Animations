@@ -1,0 +1,111 @@
+body {
+	background-color: rgb(173,216,230);
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+h1 {
+	font-family: 'Righteous', cursive; 
+	font-size: 2.5em;
+	margin: 0 -8px 8px -8px;
+	text-align: center;
+	background-color: white;
+
+	-webkit-box-shadow: 0 -4px 0 12px white, 0px 1px 20px 1px black;
+	box-shadow:
+		0 -4px 0 12px white,
+		0px 1px 20px 1px black;
+}
+
+#bar {
+	background-color: rgb(233,236,236);
+	width: 800px;
+	height: 700px;
+	margin: -8px auto;
+	padding: 20px;
+	border-radius: 10px;
+	position: relative;
+}
+
+#bar section {
+	width: 110px;
+	position: absolute;
+	margin-left: 100px;
+	padding-top: 20px;
+}
+
+.tumbler {
+	width: 100px;
+	height: 200px;
+	border: 8px solid #336;
+	border-width: 0 6px 6px 6px;
+	border-color: white black black black;
+
+	border-bottom-right-radius: 20px 30px;
+	border-bottom-left-radius: 20px 30px;
+
+	position: relative;
+	overflow: hidden;
+}
+
+.tumbler div:nth-of-type(1) p {
+	border-bottom-right-radius: 15px 20px;
+	border-bottom-left-radius: 15px 20px;
+}
+
+.tumbler div {
+	width: 100px;
+	position: absolute;
+}
+
+#rum {
+	height: 20%;
+	bottom: 0;
+}
+
+#rum p {
+	background-color: rgb(235,191,0);
+}
+
+@-webkit-keyframes rise {
+	0% { height: 0;}
+	100% { height: 100%;}
+}
+
+.tumbler div p {
+	font-family: 'Righteous', cursive;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+
+	-webkit-animation: rise 2s both ease-out;
+}
+
+#coke {
+	height: 40%;
+	bottom: 20%;
+}
+
+#coke p {
+	background-color: rgb(151,95,55);
+	color: white;
+
+	-webkit-animation-delay: 3s;
+}
+
+@-webkit-keyframes ingredientFadeIn {
+	0% { color: transparent;}
+	100% { }
+}
+
+.tumbler div p strong {
+	font-size: 0.9em;
+
+	-webkit-animation: ingredientFadeIn 1s 2s both;
+}
+
+#coke p strong {
+	-webkit-animation-delay: 5s;
+}
