@@ -109,3 +109,96 @@ h1 {
 #coke p strong {
 	-webkit-animation-delay: 5s;
 }
+
+/* Tom Collins */
+#tomcollins {
+	left: 250px;
+}
+
+#tcGin {
+	bottom: 0;
+	height: 20%;
+}
+
+#tcGin p {
+	border-top: 2px solid rgba(0,0,0,.3);
+	background-color: rgb(231,255,255);
+}
+
+#tcClubSoda {
+	bottom: 21%;
+	height: 20%;
+}
+
+#tcClubSoda p {
+	background-color: white;
+
+	-webkit-animation-delay: 2s;
+}
+
+#tcClubSoda p strong {
+	-webkit-animation-delay: 4s;
+}
+
+#tcLemon {
+	bottom: 41%;
+	height: 10%;
+}
+
+#tcLemon p {
+	background-color: yellow;
+
+	-webkit-animation-delay: 4s;
+}
+
+#tcLemon p strong {
+	-webkit-animation-delay: 6s;
+}
+
+/* Sources */
+#sources {
+	background-color: gray;
+	top: 650px;
+	width: 800px !important;
+	margin-left: -20px !important;
+	padding: 20px;
+	color: white;
+}
+
+#sources a {
+	color: white;
+}
+
+/* Gin and Tonic */
+#ginntonic {
+	left: 500px;
+}
+
+#gtGin {
+	bottom: 0;
+	height: 20%;
+}
+
+#gtGin p {
+	border-top: 2px solid rgba(0,0,0,.3);
+	background-color: rgb(231,255,255);
+}
+
+#gtGin p strong {
+	-webkit-animation-delay: 2s;
+}
+
+#gtTonic {
+	bottom: 21%;
+	height: 40%;
+}
+
+#gtTonic p {
+	background-color: white;
+
+	-webkit-animation-delay: 3s;
+}
+
+#gtTonic p strong {
+	-webkit-animation-delay: 5s;
+}
