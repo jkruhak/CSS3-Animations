@@ -158,7 +158,7 @@ h1 {
 /* Sources */
 #sources {
 	background-color: gray;
-	top: 650px;
+	top: 740px;
 	width: 800px !important;
 	margin-left: -20px !important;
 	padding: 20px;
@@ -201,4 +201,179 @@ h1 {
 
 #gtTonic p strong {
 	-webkit-animation-delay: 5s;
+}
+
+/* Bloody Mary */
+#bloodyMary {
+	left: 20px;
+  	top: 400px;
+}
+
+#bmvodka {
+	height: 15%;
+	bottom: 0;
+}
+
+#bmvodka p {
+	background-color: white;
+}
+
+#bmtomatojuice {
+	bottom: 15%;
+	height: 30%;
+}
+
+#bmtomatojuice p {
+	background-color: red;
+
+	-webkit-animation-delay: 2s;
+}
+
+#bmtomatojuice p strong {
+	-webkit-animation-delay: 4s;
+}
+
+#bmlemonjuice {
+	bottom: 45%;
+	height: 10%;
+}
+
+#bmlemonjuice p {
+	background-color: yellow;
+
+	-webkit-animation-delay: 4s;
+}
+
+#bmlemonjuice p strong {
+	-webkit-animation-delay: 6s;
+}
+
+/* Redbull Vodka */
+#redbullVodka {
+	left: 250px;
+	top: 400px;
+}
+
+#rvvodka {
+	bottom: 0;
+	height: 15%;
+}
+
+#rvvodka p {
+	background-color: white;
+}
+
+#rvredbull {
+	bottom: 15%;
+	height: 45%;
+}
+
+#rvredbull p {
+	background-color: orange;
+
+	-webkit-animation-delay: 2s;
+}
+
+#rvredbull p strong {
+	-webkit-animation-delay: 4s;
+}
+
+/* Whiskey Sour */
+#whiskeysour {
+	top: 400px;
+	left: 500px;
+}
+
+#wswhiskey {
+	bottom: 0;
+	height: 30%;
+}
+
+#wswhiskey p {
+	background-color: rgb(178,148,148);
+}
+
+#wslemonjuice {
+	bottom: 30%;
+	height: 20%;
+}
+
+#wslemonjuice p {
+	background-color: yellow;
+
+	-webkit-animation-delay: 2s;
+}
+
+#wslemonjuice p strong {
+	-webkit-animation-delay: 4s;
+}
+
+#wsgomme {
+	bottom: 50%;
+	height: 10%;
+}
+
+#wsgomme p {
+	background-color: rgb(131,35,11);
+
+	-webkit-animation-delay: 4s;
+}
+
+#wsgomme p strong {
+	color: white;
+	
+	-webkit-animation-delay: 6s;
+}
+
+/* Garnishes */
+#lime {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: 2px solid yellow;
+	bottom: 80%;
+    background-color: lime;
+    left: -20px;
+}
+
+div[class*="slice"] {
+	height: 1px;
+    width: 25px;
+    background-color: yellow;
+    position: absolute;
+    top: 26px;
+  
+    -webkit-transform-origin: 100% 50%;
+}
+
+.slice2 {
+	-webkit-transform: rotate(40deg);
+}
+
+.slice3 {
+	-webkit-transform: rotate(80deg);
+}
+
+.slice4 {
+	-webkit-transform: rotate(120deg);
+}
+
+.slice5 {
+	-webkit-transform: rotate(160deg);
+}
+
+.slice6 {
+	-webkit-transform: rotate(200deg);
+}
+
+.slice7 {
+	-webkit-transform: rotate(240deg);
+}
+
+.slice8 {
+	-webkit-transform: rotate(280deg);
+}
+
+.slice9 {
+	-webkit-transform: rotate(320deg);
 }
