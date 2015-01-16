@@ -377,3 +377,45 @@ div[class*="slice"] {
 .slice9 {
 	-webkit-transform: rotate(320deg);
 }
+
+/* Recipes */
+.recipes {
+	width: 250px;
+	position: absolute;
+	top: 60px;
+	right: -300px;
+	z-index: 2;
+
+	-webkit-transition: right 1s, top 1s;
+
+	background: #e3c997;
+	background: -webkit-radial-gradient(center, ellipse cover, #e3c997 67%, #dcbd87 87%, #cda567 100%);
+	background: -radial-gradient(ellipse at center, #e3c997 67%, #dcbd87 87%, #cda567 100%);
+}
+
+.recipes ul {
+	margin-top: 0;
+	padding: 0 10px;
+	display: none;
+}
+
+.recipes h3 {
+	padding: 10px 0;
+	margin: 0 20px;
+	display: none;
+}
+
+.recipes ul li {
+	opacity: 0;
+}
+
+.recipes.visible {
+	right: 20px;
+	-webkit-box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+	box-shadow: -2px 2px 5px rgba(0,0,0,0.3)
+}
+
+.recipes ul.visible,
+.recipes h3.visible {
+	display: block;
+}
