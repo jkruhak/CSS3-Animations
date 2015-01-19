@@ -17,7 +17,7 @@ function setup() {
 		var elem = '.recipes ' + 'li:nth-of-type(' + ingredientIndex + ')';
 
 		//add highlight class to the right ingredient in the paper
-		$(elem).addClass('hightlight');
+		$(elem).addClass('highlight');
 	});
 }
 

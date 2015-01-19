@@ -33,6 +33,27 @@ h1 {
 	padding-top: 20px;
 }
 
+#bar section h2 {
+	font-size: 1.1em;
+	margin: 5px 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+#sources {
+	background-color: gray;
+	top: 650px;
+	/* need the !important to override the '#bar section' selector */
+	width: 800px !important;
+	margin-left: -20px !important;
+	padding: 20px;
+	color: white;
+}
+
+#sources a {
+	color: white;
+}
+
 .tumbler {
 	width: 100px;
 	height: 200px;
@@ -47,6 +68,7 @@ h1 {
 	overflow: hidden;
 }
 
+/* to round the corners ONLY of the first ingredient */
 .tumbler div:nth-of-type(1) p {
 	border-bottom-right-radius: 15px 20px;
 	border-bottom-left-radius: 15px 20px;
@@ -55,8 +77,42 @@ h1 {
 .tumbler div {
 	width: 100px;
 	position: absolute;
+	cursor: pointer;
 }
 
+/* Shared animations */
+@-webkit-keyframes rise {
+	0% { height: 0;}
+	100% { height: 100%;}
+}
+
+/* Ingredient fade in */
+@-webkit-keyframes ingredientFadeIn {
+	0% { color: transparent; }
+	100% { }
+}
+
+.tumbler div p {
+	font-family: 'Righteous', cursive;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	/* place inner element right at bottom of outer div.
+	this ensures changes move bottom to top, not top to bottom */
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+
+	-webkit-animation: rise 2s both ease-out;
+}
+
+.tumbler div p strong {
+	font-size: 0.9em;
+
+	-webkit-animation: ingredientFadeIn 1s 2s both;
+}
+
+/* Rum and Coke */
 #rum {
 	height: 20%;
 	bottom: 0;
@@ -66,21 +122,11 @@ h1 {
 	background-color: rgb(235,191,0);
 }
 
-@-webkit-keyframes rise {
-	0% { height: 0;}
-	100% { height: 100%;}
-}
+#rumncoke { }
 
-.tumbler div p {
-	font-family: 'Righteous', cursive;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	position: absolute;
-	bottom: 0;
-	text-align: center;
-
-	-webkit-animation: rise 2s both ease-out;
+@-webkit-keyframes coke {
+	0% { bottom: -40%; }
+	100% { bottom: 20%;	}
 }
 
 #coke {
@@ -93,17 +139,6 @@ h1 {
 	color: white;
 
 	-webkit-animation-delay: 3s;
-}
-
-@-webkit-keyframes ingredientFadeIn {
-	0% { color: transparent;}
-	100% { }
-}
-
-.tumbler div p strong {
-	font-size: 0.9em;
-
-	-webkit-animation: ingredientFadeIn 1s 2s both;
 }
 
 #coke p strong {
@@ -376,90 +411,4 @@ div[class*="slice"] {
 
 .slice9 {
 	-webkit-transform: rotate(320deg);
-}
-
-/* Recipes */
-.recipes {
-	width: 250px;
-	position: absolute;
-	top: 60px;
-	right: -300px;
-	z-index: 2;
-
-	-webkit-transition: right 1s, top 1s;
-
-	background: #e3c997;
-	background: -webkit-radial-gradient(center, ellipse cover, #e3c997 67%, #dcbd87 87%, #cda567 100%);
-	background: -radial-gradient(ellipse at center, #e3c997 67%, #dcbd87 87%, #cda567 100%);
-}
-
-.recipes.visible {
-	right: 20px;
-	-webkit-box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
-	box-shadow: -2px 2px 5px rgba(0,0,0,0.3)
-}
-
-.recipes.visible.row2 {
-	top: 350px;
-}
-
-.recipes ul {
-	margin-left: 40px;
-	margin-top: 0;
-	padding: 0 10px;
-	display: none;
-}
-
-.recipes h3 {
-	padding: 10px 0;
-	margin: 0 20px;
-	display: none;
-}
-
-.recipes ul.visible,
-.recipes h3.visible {
-	display: block;
-}
-
-.recipes ul li {
-	opacity: 0;
-}
-
-@-webkit-keyframes fadeTextIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
-.cssanimations .recipes ul.visible li {
-	-webkit-animation: fadeTextIn 1.5s forwards;
-}
-
-.no-cssanimations .recipes ul.visible li {
-	opacity: 1;
-}
-
-@-webkit-keyframes glow {
-	0% {}
-	50% { text-shadow: 2px 2px 10px gray,
-			-2px -2px 10px gray,
-			-2px 2px 10px gray,
-			2px -2px 10px gray; }
-	60% {}
-	100% { text-shadow: 1px 1px 10px black;}
-}
-
-
-
-.recipes ul.visible li {
-	-webkit-animation: fadeTextIn 1.5s forwards;
-}
-
-
-
-
-
-
-
-.recipes ul li.highlight {
-	-webkit-animation: fadeTextIn 1.5s both, glow 2s forwards 0.5s;
 }
