@@ -6,6 +6,9 @@
 	z-index: 2;
 
 	-webkit-transition: right 1s, top 1s;
+	-moz-transition: right 1s, top 1s;
+	-o-transition: right 1s, top 1s;
+	transition: right 1s, top 1s;
 
 	background: #e3c997;
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iNjclIiBzdG9wLWNvbG9yPSIjZTNjOTk3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODclIiBzdG9wLWNvbG9yPSIjZGNiZDg3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NkYTU2NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
@@ -21,11 +24,13 @@
 .recipes.visible {
 	right: 20px;
 	-webkit-box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+	-o-box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
 	box-shadow: -2px 2px 5px rgba(0,0,0,0.3)
 }
 
 .recipes.visible.row2 {
-	top: 350px;
+	top: 400px;
 }
 
 .recipes ul {
@@ -55,8 +60,26 @@
 	100% { opacity: 1; }
 }
 
+@-moz-keyframes fadeTextIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-o-keyframes fadeTextIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeTextIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
 .cssanimations .recipes ul.visible li {
 	-webkit-animation: fadeTextIn 1.5s forwards;
+	-moz-animation: fadeTextIn 1.5s forwards;
+	-ms-animation: fadeTextIn 1.5s forwards;
+	animation: fadeTextIn 1.5s forwards;
 }
 
 .no-cssanimations .recipes ul.visible li {
@@ -70,8 +93,32 @@
   	100% {text-shadow: 1px 1px 10px black;}
 }
 
+@-moz-keyframes glow {
+	0% {}
+  	50% { text-shadow: 2px 2px 10px gray, -2px -2px 10px gray, -2px 2px 10px gray, 2px -2px 10px gray; }
+  	60% {  }
+  	100% {text-shadow: 1px 1px 10px black;}
+}
+
+@-o-keyframes glow {
+	0% {}
+  	50% { text-shadow: 2px 2px 10px gray, -2px -2px 10px gray, -2px 2px 10px gray, 2px -2px 10px gray; }
+  	60% {  }
+  	100% {text-shadow: 1px 1px 10px black;}
+}
+
+@keyframes glow {
+	0% {}
+  	50% { text-shadow: 2px 2px 10px gray, -2px -2px 10px gray, -2px 2px 10px gray, 2px -2px 10px gray; }
+  	60% {  }
+  	100% {text-shadow: 1px 1px 10px black;}
+}
+
 .cssanimations .recipes ul li.highlight {
 	-webkit-animation: fadeTextIn 1.5s both, glow 2s forwards 0.5s;
+	-moz-animation: fadeTextIn 1.5s both, glow 2s forwards 0.5s;
+	-ms-animation: fadeTextIn 1.5s both, glow 2s forwards 0.5s;
+	animation: fadeTextIn 1.5s both, glow 2s forwards 0.5s;
 }
 
 .no-cssanimations .recipes ul li.hightlight {
